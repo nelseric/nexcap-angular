@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name nexcapAngularApp.controller:AboutCtrl
+ * @name nexcapAngularApp.controller:SessionCtrl
  * @description
- * # AboutCtrl
+ * # SessionCtrl
  * Controller of the nexcapAngularApp
  */
 angular.module('nexcapAngularApp')
-  .controller('AboutCtrl', function () {
+  .controller('SessionCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
