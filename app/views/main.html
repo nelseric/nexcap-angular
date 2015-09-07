@@ -1,1 +1,4 @@
-<h1>Task List</h1>
+<div ng-include="'views/session.html'"></div>
+<div ng-show="Session.signedIn">
+  <div ng-include="'views/todo.html'"></div>
+</div>

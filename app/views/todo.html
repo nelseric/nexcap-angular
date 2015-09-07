@@ -1,0 +1,22 @@
+<div ng-controller="TodoCtrl as todoCtrl">  
+  <table class="table">
+    <tr>
+      <td colspan="2">
+        <form name="todoForm" class="form-inline" ng-submit="todoCtrl.createTodo(newTodo)">
+          <div class="control-group">
+            <input type="text" class="form-control" ng-model="newTodo.description" placeholder="Task" required />
+            <button ng-disabled="expression"="!todoForm.$valid" class="btn btn-primary">Create</button>
+          </div>
+        </form>
+      </td> 
+    </tr>
+    <tr ng-repeat="task in todoCtrl.todos">
+      <td>
+        {{task.description}}
+      </td>
+      <td>
+        <span ng-click="todoCtrl.toggleTodo(task)" class="glyphicon" ng-class="{'glyphicon-check': task.is_complete, 'glyphicon-unchecked': !task.is_complete}"></span>
+      </td>
+    </tr>
+  </table>
+</div>

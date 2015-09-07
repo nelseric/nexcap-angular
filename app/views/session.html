@@ -1,0 +1,30 @@
+<div ng-controller="SessionCtrl as sessionCtrl">
+  <div ng-hide="Session.signedIn">
+    <h2>{{sessionModel.newUser ? "Sign Up" : "Sign In"}}</h2>
+    <form class="" name="sessionForm" ng-submit="sessionCtrl.signIn(sessionModel)">
+      <div class="form-group">
+        <label for="newUser">
+          <input type="checkbox" name="newUser" ng-model="sessionModel.newUser">
+          New User?
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" placeholder="Email Address" class="form-control" name="email" ng-model="sessionModel.email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" class="form-control" name="password" ng-model="sessionModel.password" required>
+      </div>
+
+      <div class="form-group">
+        <button ng-disabled="!sessionForm.$valid" type="submit" class='btn btn-default'>Submit</button>
+      </div>
+    </form>
+  </div>
+  <div ng-show="Session.signedIn">
+    <button href ng-click="sessionCtrl.signOut()" class="btn btn-danger">Sign Out</a>
+  </div>
+</div>
